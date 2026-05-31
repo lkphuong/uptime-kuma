@@ -95,6 +95,7 @@ const HaloPSA = require("./notification-providers/HaloPSA");
 const Max = require("./notification-providers/max");
 const VK = require("./notification-providers/vk");
 const VKTeams = require("./notification-providers/vkteams");
+const Zalo = require("./notification-providers/zalo");
 
 class Notification {
     providerList = {};
@@ -205,6 +206,7 @@ class Notification {
             new Max(),
             new VK(),
             new VKTeams(),
+            new Zalo(),
         ];
         for (let item of list) {
             if (!item.name) {

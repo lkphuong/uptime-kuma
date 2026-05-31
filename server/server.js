@@ -1598,6 +1598,27 @@ let needSetup = false;
             }
         });
 
+        socket.on("getZaloGroups", async (notification, callback) => {
+            try {
+                checkLogin(socket);
+
+                const provider = Notification.providerList.zalo;
+                const groups = await provider.getGroupOptions(notification);
+
+                callback({
+                    ok: true,
+                    groups,
+                });
+            } catch (e) {
+                log.error("server", e);
+
+                callback({
+                    ok: false,
+                    msg: e.message,
+                });
+            }
+        });
+
         socket.on("checkApprise", async (callback) => {
             try {
                 checkLogin(socket);

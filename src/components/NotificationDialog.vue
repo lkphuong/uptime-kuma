@@ -247,6 +247,7 @@ export default {
                 evolution: "WhatsApp (Evolution)",
                 waha: "WhatsApp (WAHA)",
                 Whatsapp360messenger: "WhatsApp (360messenger)",
+                zalo: "Zalo",
             };
 
             // Push Services - Push notification services
