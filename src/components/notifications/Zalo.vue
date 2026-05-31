@@ -62,6 +62,24 @@
         </div>
         <div class="form-text">Load groups after entering Cookie JSON, IMEI, and User-Agent.</div>
     </div>
+
+    <div class="mb-3">
+        <div class="form-check">
+            <input
+                id="zalo-escalation-toggle"
+                v-model="$parent.notification.zaloEscalationEnabled"
+                class="form-check-input"
+                type="checkbox"
+            />
+            <label class="form-check-label" for="zalo-escalation-toggle">
+                Enable time-based escalation
+            </label>
+        </div>
+        <div class="form-text">
+            Configure escalation intervals and message templates via
+            UPTIME_KUMA_ZALO_ESCALATION environment variable.
+        </div>
+    </div>
 </template>
 
 <script>

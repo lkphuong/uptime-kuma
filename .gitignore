@@ -9,6 +9,7 @@ dist-ssr
 !/data/.gitkeep
 /data*
 .vscode
+.claude
 
 /private
 /out
